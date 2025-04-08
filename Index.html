@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BePapaia | Piercing e Gioielli all'Ingrosso</title>
+<meta content="Registrati per accedere ai prezzi all'ingrosso e ottieni uno sconto del 25% sul tuo primo ordine. Più di 10.000 articoli in stock, spedizione rapida in tutta Europa." name="description"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --primary: #e60073;
+      --primary-light: #ff3399;
+      --secondary: #00c2c2;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+    section {
+      border-bottom: 1px solid #2a2a2a;
+      padding-bottom: 40px;
+      margin-bottom: 40px;
+    }
+    .hero {
+      background: radial-gradient(circle, #1e1e1e 0%, #121212 100%);
+      padding: 80px 20px 40px;
+      text-align: center;
+    }
+    .hero img {
+      width: 325px;
+      margin-bottom: 30px;
+    }
+    .hero h1 {
+      font-size: 34px;
+      margin-bottom: 20px;
+      color: var(--secondary);
+    }
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+      color: #e0e0e0;
+    }
+    .cta-button {
+      background-color: var(--primary);
+      color: #fff;
+      padding: 16px 32px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      margin-top: 20px;
+    }
+    .cta-button:hover {
+      background-color: var(--primary-light);
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .gallery img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      padding: 0 20px;
+    }
+    .feature-card {
+      background-color: #1e1e1e;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .feature-card {
+      background-color: #1a1f22;
+      border-left: 4px solid var(--primary);
+    }
+    .feature-card:nth-child(odd) {
+      background-color: #1e1e1e;
+      border-left: 4px solid var(--primary);
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+    .feature-card h3 {
+      color: var(--secondary);
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+    .feature-card p {
+      font-size: 16px;
+      color: #ccc;
+    }
+    .testimonials {
+      max-width: 900px;
+      margin: 60px auto 40px;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .testimonials h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+    .testimonial-list {
+      display: grid;
+      gap: 30px;
+    }
+    .testimonial-list blockquote {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-left: 5px solid var(--primary);
+      border-radius: 8px;
+      font-style: italic;
+      color: #ccc;
+    }
+    .testimonial-list cite {
+      display: block;
+      margin-top: 10px;
+      font-size: 16px;
+      color: #999;
+    }
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #888;
+      padding: 40px 20px;
+      background-color: #1a1a1a;
+    }
+  
+    .cta-button {
+      box-shadow: 0 8px 20px rgba(255, 51, 153, 0.2);
+      font-weight: 600;
+    }
+    .cta-button:hover {
+      transform: scale(1.05);
+    }
+    .feature-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    }
+    
+    .feature-card h3,
+    .hero h1 {
+      color: var(--primary);
+    }
+    .cta-button {
+      background-color: var(--primary);
+    }
+    .cta-button:hover {
+      background-color: var(--primary-light);
+    }
+    
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .carousel-item {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  h1, h2 {
+    font-size: 22px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+  }
+
+  .cta-button {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/><style>
+#carousel-prev:hover, #carousel-next:hover {
+  background-color: #00c2c2;
+  color: #121212;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Fondo para los precios */
+.carousel-item p {
+  background-color: #1e1e1e;
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Hover más marcado en galería */
+.gallery img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 12px 24px rgba(0,194,194,0.3);
+}
+
+/* Fade-in animación */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mejora tipográfica de bloques */
+.feature-card h3 {
+  font-size: 22px;
+  color: #00ffff;
+}
+.feature-card p {
+  font-size: 17px;
+  color: #ddd;
+}
+
+/* Fondo alterno en secciones */
+section:nth-of-type(even) {
+  background-color: #181818;
+}
+</style><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "BePapaia",
+  "url": "https://www.bepapaia.com",
+  "logo": "https://www.bepapaia.com/logo.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+34-934-591-718",
+    "contactType": "Customer Service",
+    "areaServed": "EU",
+    "availableLanguage": "Italian"
+  }
+}
+</script></head>
+<body style="padding: 0 0 60px 0;"><section class="hero fade-in">
+<a href="https://www.bepapaia.com/it"><img alt="BePapaia Logo" src="logobpp.png"/></a>
+<h1>Scopri i nostri piercing professionali all’ingrosso per il tuo negozio</h1>
+<p>Distribuiamo qualità e tendenze ai professionisti del piercing in tutta Europa.</p>
+<p style="margin-bottom: 40px;">Registrati per accedere ai prezzi e ottieni il 25% di sconto con il codice ITALIA25.</p>
+<a class="cta-button" href="https://www.bepapaia.com/it/pages/register">Scopri i nostri piercing all’ingrosso</a>
+</section><h2 style="text-align:center; color:#00c2c2; font-size: 26px; margin: 60px 0 20px;">Scopri le novità più richieste dai professionisti del settore</h2><p style="text-align:center; font-size:18px; max-width:900px; margin: 0 auto 40px; color:#ccc;">Scopri il nostro catalogo di piercing professionali in titanio e acciaio 316L, pensato per studi e negozi in tutta Europa.</p><div class="gallery">
+<a href="https://www.bepapaia.com/it"><img alt="Gioielli 1" src="image1.jpg"/></a>
+<a href="https://www.bepapaia.com/it"><img alt="Gioielli 2" src="image2.jpg"/></a>
+<a href="https://www.bepapaia.com/it/products/labret-de-titanio-xxx-5798?_pos=1&amp;_sid=0e8acb893&amp;_ss=r&amp;variant=54184696906054"><img alt="Gioielli 3" src="image3.jpg"/></a>
+<a href="https://www.bepapaia.com/en/collections/news-piercing/products/labret-con-cadena-glam-punk"><img alt="Gioielli 4" src="image4.jpg"/></a>
+<a href="https://www.bepapaia.com/it/products/piercing-de-ombligo-con-colgantes-chic-ii?_pos=1&amp;_sid=92441fe2c&amp;_ss=r&amp;variant=53980983853382"><img alt="Gioielli 5" src="image5.jpg"/></a><a href="https://www.bepapaia.com/it"><img alt="Gioielli 6" src="image6.jpg"/></a></div><div style="position: relative; max-width: 1000px; margin: 0 auto;"><button id="carousel-prev" style="left:10px;position:absolute;top:50%;transform:translateY(-50%);background:#121212;border:none;color:white;font-size:22px;width:40px;height:40px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;border-radius:50%;">❮</button><div class="carousel-wrapper" style="overflow-x: auto; max-width: 1000px; margin: 60px auto;"><div class="carousel" style="display: flex; gap: 16px; transition: transform 0.5s ease; min-width: max-content;"><div class="carousel-item" style="flex: 0 0 auto; width: 230px; background: #1e1e1e; border-radius: 8px; padding: 16px; text-align: center;"><a href="https://www.bepapaia.com/it/products/piercing-de-ombligo-marquesa-mix?_pos=1&amp;_sid=04a28dfa8&amp;_ss=r&amp;variant=53985246839110"><img alt="Piercing professionale all’ingrosso per negozi - Articolo 1" loading="lazy" src="imgprod1.jpg" style="width:100%; border-radius: 6px; margin-bottom: 10px;"/></a><p style="color:#00c2c2; font-size: 15px; margin-top: 6px;">Da: 2,70 €</p></div><div class="carousel-item" style="flex: 0 0 auto; width: 230px; background: #1e1e1e; border-radius: 8px; padding: 16px; text-align: center;"><a href="https://www.bepapaia.com/en/products/labret-de-titanio-dorado-eos?_pos=1&amp;_sid=d80d98358&amp;_ss=r&amp;variant=54109657760070"><img alt="Piercing professionale all’ingrosso per negozi - Articolo 2" loading="lazy" src="imgprod2.jpg" style="width:100%; border-radius: 6px; margin-bottom: 10px;"/></a><p style="color:#00c2c2; font-size: 15px; margin-top: 6px;">Da: 7,85 €</p></div><div class="carousel-item" style="flex: 0 0 auto; width: 230px; background: #1e1e1e; border-radius: 8px; padding: 16px; text-align: center;"><a href="https://www.bepapaia.com/it/products/labret-con-cadenita-y-colgante?_pos=1&amp;_sid=13b1b44f8&amp;_ss=r&amp;variant=53879529406790"><img alt="Piercing professionale all’ingrosso per negozi - Articolo 3" loading="lazy" src="imgprod3.jpg" style="width:100%; border-radius: 6px; margin-bottom: 10px;"/></a><p style="color:#00c2c2; font-size: 15px; margin-top: 6px;">Da: 3,15 €</p></div><div class="carousel-item" style="flex: 0 0 auto; width: 230px; background: #1e1e1e; border-radius: 8px; padding: 16px; text-align: center;"><a href="https://www.bepapaia.com/it/products/aro-clicker-eclipse?_pos=1&amp;_sid=dbf31b537&amp;_ss=r&amp;variant=53975377871174"><img alt="Piercing professionale all’ingrosso per negozi - Articolo 4" loading="lazy" src="imgprod4.jpg" style="width:100%; border-radius: 6px; margin-bottom: 10px;"/></a><p style="color:#00c2c2; font-size: 15px; margin-top: 6px;">Da: 3,15 €</p></div><div class="carousel-item" style="flex: 0 0 auto; width: 230px; background: #1e1e1e; border-radius: 8px; padding: 16px; text-align: center;"><a href="https://www.bepapaia.com/it/products/piercing-de-ombligo-con-colgantes-chic-ii?_pos=1&amp;_sid=92441fe2c&amp;_ss=r&amp;variant=53980983853382"><img alt="Piercing professionale all’ingrosso per negozi - Articolo 5" loading="lazy" src="imgprod5.jpg" style="width:100%; border-radius: 6px; margin-bottom: 10px;"/></a><p style="color:#00c2c2; font-size: 15px; margin-top: 6px;">Da: 4,05 €</p></div><div class="carousel-item" style="flex: 0 0 auto; width: 230px; background: #1e1e1e; border-radius: 8px; padding: 16px; text-align: center;"><a href="https://www.bepapaia.com/it/products/piercing-de-pezon-con-brillantes-petalo?_pos=1&amp;_sid=f9d5b0901&amp;_ss=r&amp;variant=53879538778438"><img alt="Piercing professionale all’ingrosso per negozi - Articolo 6" loading="lazy" src="imgprod6.jpg" style="width:100%; border-radius: 6px; margin-bottom: 10px;"/></a><p style="color:#00c2c2; font-size: 15px; margin-top: 6px;">Da: 3,80 €</p></div><div class="carousel-item" style="flex: 0 0 auto; width: 230px; background: #1e1e1e; border-radius: 8px; padding: 16px; text-align: center;"><a href="https://www.bepapaia.com/it/products/labret-dorado-con-circonitas-en-cascada?_pos=1&amp;_sid=c1a37917a&amp;_ss=r&amp;variant=53879527309638"><img alt="Piercing professionale all’ingrosso per negozi - Articolo 7" loading="lazy" src="imgprod7.jpg" style="width:100%; border-radius: 6px; margin-bottom: 10px;"/></a><p style="color:#00c2c2; font-size: 15px; margin-top: 6px;">Da: 3,37 €</p></div><div class="carousel-item" style="flex: 0 0 auto; width: 230px; background: #1e1e1e; border-radius: 8px; padding: 16px; text-align: center;"><a href="https://www.bepapaia.com/it/products/piercing-de-ombligo-con-colgantes-chic-ii?_pos=1&amp;_sid=92441fe2c&amp;_ss=r&amp;variant=53980983853382"><img alt="Piercing professionale all’ingrosso per negozi - Articolo 8" loading="lazy" src="imgprod8.jpg" style="width:100%; border-radius: 6px; margin-bottom: 10px;"/></a><p style="color:#00c2c2; font-size: 15px; margin-top: 6px;">Da: 4,05 €</p></div><div class="carousel-item" style="flex: 0 0 auto; width: 230px; background: #1e1e1e; border-radius: 8px; padding: 16px; text-align: center;"><a href="https://www.bepapaia.com/it/products/labret-de-titanio-xxx-5798?_pos=1&amp;_sid=0e8acb893&amp;_ss=r&amp;variant=54184696906054"><img alt="Piercing professionale all’ingrosso per negozi - Articolo 9" loading="lazy" src="imgprod9.jpg" style="width:100%; border-radius: 6px; margin-bottom: 10px;"/></a><p style="color:#00c2c2; font-size: 15px; margin-top: 6px;">Da: 4,75 €</p></div><div class="carousel-item" style="flex: 0 0 auto; width: 230px; background: #1e1e1e; border-radius: 8px; padding: 16px; text-align: center;"><a href="https://www.bepapaia.com/it/products/labret-de-titanio-xxx-5798?_pos=1&amp;_sid=0e8acb893&amp;_ss=r&amp;variant=54184696906054"><img alt="Piercing professionale all’ingrosso per negozi - Articolo 10" loading="lazy" src="imgprod10.jpg" style="width:100%; border-radius: 6px; margin-bottom: 10px;"/></a><p style="color:#00c2c2; font-size: 15px; margin-top: 6px;">Da: 4,75 €</p></div><div class="carousel-item" style="flex: 0 0 auto; width: 230px; background: #1e1e1e; border-radius: 8px; padding: 16px; text-align: center;"><a href="https://www.bepapaia.com/it/collections/novita-piercing/products/labret-de-titanio-dorado-afrodita"><img alt="Piercing professionale all’ingrosso per negozi - Articolo 11" loading="lazy" src="imgprod11.jpg" style="width:100%; border-radius: 6px; margin-bottom: 10px;"/></a><p style="color:#00c2c2; font-size: 15px; margin-top: 6px;">Da: 9,60 €</p></div><div class="carousel-item" style="flex: 0 0 auto; width: 230px; background: #1e1e1e; border-radius: 8px; padding: 16px; text-align: center;"><a href="https://www.bepapaia.com/it/collections/novita-piercing/products/labret-de-titanio-dorado-afrodita"><img alt="Piercing professionale all’ingrosso per negozi - Articolo 12" loading="lazy" src="imgprod12.jpg" style="width:100%; border-radius: 6px; margin-bottom: 10px;"/></a><p style="color:#00c2c2; font-size: 15px; margin-top: 6px;">Da: 9,60 €</p></div><div class="carousel-item" style="flex: 0 0 auto; width: 230px; background: #1e1e1e; border-radius: 8px; padding: 16px; text-align: center;"><a href="https://www.bepapaia.com/it/collections/novita-piercing/products/piercing-de-ombligo-con-colgantes-chic-ii-copy"><img alt="Piercing professionale all’ingrosso per negozi - Articolo 13" loading="lazy" src="imgprod13.jpg" style="width:100%; border-radius: 6px; margin-bottom: 10px;"/></a><p style="color:#00c2c2; font-size: 15px; margin-top: 6px;">Da: 4,50 €</p></div><div class="carousel-item" style="flex: 0 0 auto; width: 230px; background: #1e1e1e; border-radius: 8px; padding: 16px; text-align: center;"><a href="https://www.bepapaia.com/it/collections/novita-piercing/products/clicker-con-brillantes-devi"><img alt="Piercing professionale all’ingrosso per negozi - Articolo 14" loading="lazy" src="imgprod14.jpg" style="width:100%; border-radius: 6px; margin-bottom: 10px;"/></a><p style="color:#00c2c2; font-size: 15px; margin-top: 6px;">Da: 6,75 €</p></div><div class="carousel-item" style="flex: 0 0 auto; width: 230px; background: #1e1e1e; border-radius: 8px; padding: 16px; text-align: center;"><a href="https://www.bepapaia.com/it/collections/novita-piercing/products/labret-dorado-con-cadena-glam-punk"><img alt="Piercing professionale all’ingrosso per negozi - Articolo 15" loading="lazy" src="imgprod15.jpg" style="width:100%; border-radius: 6px; margin-bottom: 10px;"/></a><p style="color:#00c2c2; font-size: 15px; margin-top: 6px;">Da: 3,60 €</p></div></div></div><button id="carousel-next" style="right:10px;position:absolute;top:50%;transform:translateY(-50%);background:#121212;border:none;color:white;font-size:22px;width:40px;height:40px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;border-radius:50%;">❯</button></div><section class="features fade-in">
+<div style="padding: 24px;"><h2 style="text-align: center; color: #00c2c2; font-size: 28px; margin-bottom: 30px;">Vantaggi per il tuo negozio</h2>
+<div class="features-grid">
+<div class="feature-card">
+<h3>💰 Prezzi imbattibili per rivenditori</h3>
+<p>All’ingrosso, con sconti per volumi crescenti.</p>
+</div>
+<div class="feature-card">
+<h3>📦 10.000+ articoli in pronta consegna</h3>
+<p>Disponibili subito, aggiornati con le ultime tendenze.</p>
+</div>
+<div class="feature-card">
+<h3>🚚 Spedizione rapida</h3>
+<p>In tutta Europa in 24 ore. Gratuita da 500€.</p>
+</div>
+<div class="feature-card">
+<h3>✔️ Materiali certificati</h3>
+<p>Titanio ASTM F-136, Acciaio 316L, Argento 925.</p>
+</div>
+<div class="feature-card">
+<h3>📱 Supporto diretto</h3>
+<p>Assistenza clienti in italiano via WhatsApp.</p>
+</div>
+<div class="feature-card">
+<h3>📌 2.500+ negozi</h3>
+<p>Ci scelgono ogni giorno in tutta Europa.</p>
+</div>
+</div>
+<div style="text-align:center; margin-top: 40px;">
+</div>
+<p style="text-align:center; font-size:16px; color:#ccc; margin-top: 30px;">BePapaia è il partner di fiducia per studi di piercing, negozi alternativi e gioiellerie in cerca di novità affidabili.</p></div></section><section class="fade-in" style="background: linear-gradient(to right, #1e1e1e, #2c2c2c); border: 2px solid #ff3399; border-radius: 12px; padding: 60px 30px; margin: 60px auto; text-align: center; max-width: 900px; box-shadow: 0 0 20px rgba(255,51,153,0.2);"><p style="font-size: 18px; color: #ccc;">I nostri prezzi sono visibili solo ai professionisti registrati. Registrandoti, ottieni accesso immediato al nostro catalogo completo e il 25% di sconto sul tuo primo ordine.</p><p style="font-size: 16px; color: #ff3399; font-weight: bold; margin-top: 20px;">Utilizza il codice sconto ITALIA25 al momento della compra per ottenere il 25% di sconto sul tuo primo ordine.</p><a class="cta-button" href="https://www.bepapaia.com/it/pages/register" style="margin-top: 20px; display: inline-block;">Registrati ora e scopri i prezzi riservati</a></section><section class="testimonials fade-in">
+<div style="padding: 24px;">
+<h2>Cosa dicono i nostri clienti</h2>
+<div class="testimonial-list">
+<blockquote>
+<p>"BePapaia ha rivoluzionato il nostro stock: spedizioni veloci e prodotti di qualità. Consigliatissimo!"</p>
+<cite>– Martina, Studio Piercing Milano</cite>
+</blockquote>
+<blockquote>
+<p>"Prezzi competitivi, vasta scelta e un servizio clienti super disponibile."</p>
+<cite>– Luca, Negozio Accessori Torino</cite>
+</blockquote>
+</div>
+</div></section><div style="text-align:center; margin: 40px 0;"></div><script>
+const carousel = document.querySelector('.carousel-wrapper');
+const nextBtn = document.getElementById('carousel-next');
+const prevBtn = document.getElementById('carousel-prev');
+
+let scrollPerClick = 250;
+
+nextBtn.addEventListener('click', () => {
+  carousel.scrollBy({ left: scrollPerClick, behavior: 'smooth' });
+});
+
+prevBtn.addEventListener('click', () => {
+  carousel.scrollBy({ left: -scrollPerClick, behavior: 'smooth' });
+});
+
+// Auto-scroll every 4 seconds
+setInterval(() => {
+  carousel.scrollBy({ left: scrollPerClick, behavior: 'smooth' });
+}, 4000);
+</script><section class="fade-in" style="text-align:center; padding:40px 20px; background-color:#1a1a1a; border-top: 1px solid #2a2a2a;">
+<h2 style="color:#00c2c2; font-size:24px; margin-bottom:20px;">Contatti</h2>
+<p><strong>Telefono:</strong><br/>+34 934 591 718<br/>+34 629 640 176</p>
+<p><strong>WhatsApp</strong></p>
+<p style="color: #00c2c2; font-weight: bold;">💬 Hai dubbi? Scrivici direttamente su WhatsApp in italiano, ti rispondiamo in pochi minuti.<br/>+34 629 640 176</p>
+<p><strong>E-mail:</strong><br/><a href="mailto:contact@bepapaia.com" style="color: #00c2c2;">contact@bepapaia.com</a></p>
+<p><strong>Showroom e Ufficio:</strong><br/>C./ Trafalgar, 41<br/>08010 Barcellona, Spagna</p>
+</section><script>
+document.addEventListener("DOMContentLoaded", function() {
+  const elements = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  elements.forEach(el => observer.observe(el));
+});
+</script></body>
+</html>
